@@ -1,4 +1,3 @@
-<!--- File: AURA | Premium Lifestyle Store.txt --->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,7 @@
         :root {
             --primary: #1a1a1a;
             --secondary: #666666;
-            --accent: #d4af37; /* Goldish */
+            --accent: #d4af37;
             --bg: #f9f9f9;
             --white: #ffffff;
             --border: #e5e5e5;
@@ -25,7 +24,7 @@
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --text-light: #999999; 
             --light-blue: #3498db;
-            --price-red: #e74c3c; /* Added Red for Prices */
+            --price-red: #e74c3c;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,7 +56,6 @@
             border-bottom: 1px solid var(--border);
             padding: 1.2rem 0;
             transition: var(--transition);
-            /* Fixed height ensures accurate calculation */
             height: 80px; 
         }
 
@@ -72,7 +70,6 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 600;
-            letter-spacing: -0.5px;
         }
 
         .nav-center {
@@ -92,24 +89,9 @@
             position: relative;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
         .search-bar {
             flex: 1;
-            max-width: 250px; /* Reduced width */
+            max-width: 250px;
             margin: 0 1rem;
             position: relative;
         }
@@ -137,9 +119,7 @@
             color: var(--secondary);
         }
 
-        .sort-dropdown {
-            position: relative;
-        }
+        .sort-dropdown { position: relative; }
 
         .sort-btn {
             background: transparent;
@@ -190,10 +170,7 @@
             transition: var(--transition);
         }
 
-        .sort-option:hover {
-            background: #f5f5f5;
-            color: var(--primary);
-        }
+        .sort-option:hover { background: #f5f5f5; color: var(--primary); }
 
         .cart-icon-container {
             position: relative;
@@ -201,10 +178,7 @@
             cursor: pointer;
         }
 
-        .cart-icon {
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
+        .cart-icon { font-size: 1.2rem; transition: var(--transition); }
 
         .cart-icon-container:hover .cart-icon {
             transform: scale(1.1);
@@ -227,10 +201,10 @@
             font-weight: 600;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             height: 650px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/mockup-showcases-collection-of-tech-gadgets-designed-in-isometric-view-featuring-stylish-headphones-sleek-power-bank-and-modern-smartphone-all-ready-for-branding-and-customization-photo.jpeg');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -248,7 +222,7 @@
             margin-bottom: 1rem;
         }
 
-        /* --- MAIN LAYOUT --- */
+        /* --- SHOP LAYOUT --- */
         .shop-layout {
             display: grid;
             grid-template-columns: 250px 1fr;
@@ -256,14 +230,9 @@
             padding-bottom: 4rem;
         }
 
-        /* --- SIDEBAR FILTERS --- */
-        .filters {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
+        .filters { position: sticky; top: 100px; height: fit-content; }
         .filter-group { margin-bottom: 2rem; }
+        
         .filter-title {
             font-weight: 600;
             margin-bottom: 1rem;
@@ -290,7 +259,6 @@
             padding-left: 10px;
         }
 
-        /* --- PRODUCT GRID --- */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -328,9 +296,7 @@
             transition: transform 0.5s ease;
         }
 
-        .product-card:hover .card-image-wrapper img {
-            transform: scale(1.05);
-        }
+        .product-card:hover .card-image-wrapper img { transform: scale(1.05); }
 
         .card-info {
             padding: 1.2rem;
@@ -350,21 +316,10 @@
             font-size: 0.75rem;
             color: var(--secondary);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .card-id {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-left: 10px;
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 0 0 0.3rem 0;
-        }
+        .card-id { font-size: 0.75rem; color: var(--text-light); margin-left: 10px; }
+        .card-title { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.3rem 0; }
 
         .card-actions-row {
             display: flex;
@@ -379,19 +334,10 @@
             font-weight: 600;
             color: var(--primary);
             text-decoration: underline;
-            padding: 0;
-            text-transform: uppercase;
             background: transparent;
         }
-        
-        .details-link:hover {
-            color: var(--accent);
-        }
 
-        .card-rating {
-            font-size: 0.8rem;
-            color: var(--accent);
-        }
+        .card-rating { font-size: 0.8rem; color: var(--accent); }
 
         .card-footer {
             display: flex;
@@ -400,11 +346,10 @@
             margin-top: 1rem;
         }
 
-        /* --- UPDATED PRICE STYLES --- */
         .price {
             font-weight: 700;
             font-size: 1.1rem;
-            color: var(--price-red); /* Red Price */
+            color: var(--price-red);
         }
 
         .add-btn {
@@ -416,21 +361,16 @@
             transition: var(--transition);
         }
 
-        .add-btn:hover {
-            background: #333;
-        }
+        .add-btn:hover { background: #333; }
 
         /* --- CART SIDEBAR --- */
         .cart-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0,0,0,0.5);
             z-index: 200;
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0; visibility: hidden;
             transition: var(--transition);
         }
 
@@ -438,10 +378,8 @@
 
         .cart-sidebar {
             position: fixed;
-            top: 0;
-            right: 0;
-            width: 400px;
-            height: 100%;
+            top: 0; right: 0;
+            width: 400px; height: 100%;
             background: var(--white);
             z-index: 201;
             transform: translateX(100%);
@@ -462,12 +400,25 @@
         }
 
         .cart-header h2 { font-size: 1.2rem; }
-        
+
         .close-cart {
             background: transparent;
             font-size: 1.5rem;
             color: var(--primary);
         }
+
+        /* New Clear Cart Button */
+        .clear-cart-btn {
+            font-size: 0.8rem;
+            color: #e74c3c;
+            background: none;
+            text-decoration: underline;
+            padding: 0;
+            display: none; /* Hidden initially */
+            cursor: pointer;
+        }
+
+        .clear-cart-btn:hover { color: #c0392b; }
 
         .cart-items {
             flex: 1;
@@ -488,19 +439,16 @@
         }
 
         .cart-item img {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 4px;
+            width: 70px; height: 70px;
+            object-fit: cover; border-radius: 4px;
         }
 
         .cart-item-details { flex: 1; }
         .cart-item-title { font-weight: 600; font-size: 0.9rem; }
         
-        /* Updated Price Style */
-        .cart-item-price { 
-            color: var(--light-blue); 
-            font-size: 0.9rem; 
+        .cart-item-price {
+            color: var(--light-blue);
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
@@ -509,13 +457,12 @@
             align-items: center;
             gap: 10px;
             margin-top: 0.5rem;
-            justify-content: space-between; /* Pushes total to the right */
+            justify-content: space-between;
             width: 100%;
         }
 
         .qty-btn {
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             border-radius: 50%;
             border: 1px solid var(--border);
             background: var(--white);
@@ -525,11 +472,10 @@
             font-size: 0.8rem;
         }
 
-        /* New style for the line total */
         .line-total {
             font-weight: 600;
-            color: var(--price-red); /* Red Line Total */
-            margin-left: auto; /* Pushes this element to the far right */
+            color: var(--price-red);
+            margin-left: auto;
             padding-right: 5px;
         }
 
@@ -544,17 +490,16 @@
             justify-content: space-between;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
-            color: var(--primary); /* Changed to Black */
+            color: var(--primary);
         }
 
-        /* --- UPDATED ORDER TOTAL STYLES --- */
         .total-row {
             display: flex;
             justify-content: space-between;
             font-weight: 700;
             font-size: 1.2rem;
             margin: 1rem 0;
-            color: var(--price-red); /* Red Order Total */
+            color: var(--price-red);
             border-top: 1px solid #e0e0e0;
             padding-top: 1rem;
         }
@@ -571,34 +516,26 @@
 
         .checkout-btn:hover { opacity: 0.9; }
 
-        /* --- PRODUCT MODAL --- */
+        /* --- MODAL --- */
         .product-modal-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0,0,0,0.6);
             z-index: 300;
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0; visibility: hidden;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .product-modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
+        .product-modal-overlay.open { opacity: 1; visibility: visible; }
 
         .product-modal {
             background: var(--white);
-            width: 90%;
-            max-width: 900px;
-            max-height: 90vh;
-            overflow-y: auto;
+            width: 90%; max-width: 900px;
+            max-height: 90vh; overflow-y: auto;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
@@ -607,16 +544,12 @@
         }
 
         @media (min-width: 768px) {
-            .product-modal {
-                flex-direction: row;
-                height: auto;
-            }
+            .product-modal { flex-direction: row; height: auto; }
         }
 
         .modal-close-btn {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 15px; right: 15px;
             background: transparent;
             font-size: 1.5rem;
             color: var(--primary);
@@ -624,23 +557,15 @@
         }
 
         .modal-image-wrapper {
-            width: 100%;
-            height: 300px;
+            width: 100%; height: 300px;
             background: #f0f0f0;
         }
-        
+
         @media (min-width: 768px) {
-            .modal-image-wrapper {
-                width: 50%;
-                height: 500px;
-            }
+            .modal-image-wrapper { width: 50%; height: 500px; }
         }
 
-        .modal-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .modal-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
 
         .modal-details {
             padding: 2rem;
@@ -651,10 +576,8 @@
         }
 
         .modal-category {
-            font-size: 0.85rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.85rem; color: var(--secondary);
+            text-transform: uppercase; letter-spacing: 1px;
             margin-bottom: 0.5rem;
         }
 
@@ -664,16 +587,8 @@
             margin-bottom: 1rem;
         }
 
-        .modal-rating {
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-desc {
-            color: var(--secondary);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
+        .modal-rating { color: var(--accent); margin-bottom: 1.5rem; }
+        .modal-desc { color: var(--secondary); line-height: 1.8; margin-bottom: 2rem; }
 
         .modal-footer {
             display: flex;
@@ -683,44 +598,30 @@
             padding-top: 1.5rem;
         }
 
-        /* --- UPDATED MODAL PRICE --- */
         .modal-price {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--price-red); /* Red Modal Price */
+            color: var(--price-red);
         }
 
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-        }
+        .modal-actions { display: flex; gap: 1rem; }
 
         .modal-add-btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 4px;
-            font-weight: 600;
+            background: var(--primary); color: var(--white);
+            padding: 12px 24px; border-radius: 4px; font-weight: 600;
         }
 
         .modal-return-btn {
-            background: transparent;
-            color: var(--secondary);
-            padding: 12px 24px;
-            border: 1px solid var(--border);
-            border-radius: 4px;
+            background: transparent; color: var(--secondary);
+            padding: 12px 24px; border: 1px solid var(--border); border-radius: 4px;
         }
 
-        .modal-return-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
+        .modal-return-btn:hover { border-color: var(--primary); color: var(--primary); }
 
-        /* --- TOAST NOTIFICATION --- */
+        /* --- TOAST & FOOTER --- */
         .toast {
             position: fixed;
-            bottom: 30px;
-            left: 50%;
+            bottom: 30px; left: 50%;
             transform: translateX(-50%) translateY(100px);
             background: var(--primary);
             color: var(--white);
@@ -733,12 +634,8 @@
             font-size: 0.9rem;
         }
         
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
-        /* --- FOOTER --- */
         footer {
             background: var(--primary);
             color: var(--white);
@@ -746,20 +643,15 @@
             padding: 3rem 0;
             margin-top: auto;
         }
-        
+
         .footer-content h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .copyright {
-            font-size: 0.8rem;
-            color: #999;
-            margin-top: 1rem;
-        }
+        .copyright { font-size: 0.8rem; color: #999; margin-top: 1rem; }
 
-        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .shop-layout { grid-template-columns: 1fr; }
             .filters { display: none; }
@@ -780,28 +672,25 @@
             
             <div class="nav-center">
                 <a href="#" class="nav-link" onclick="scrollToHome(event)">Home</a>
-                <a href="#shop-section" class="nav-link" onclick="scrollToShop(event)">Shop Categories</a>
+                <a href="#shop-section" class="nav-link" onclick="scrollToShop(event)">Shop</a>
                 
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Search for products...">
+                    <input type="text" id="search-input" placeholder="Search...">
                 </div>
 
-                <!-- Added ID to the container for the click-outside listener -->
                 <div class="sort-dropdown" id="sort-dropdown">
                     <button class="sort-btn" onclick="toggleSortMenu()">
                         Sort <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="sort-menu" id="sort-menu">
                         <div class="sort-option" onclick="sortProducts('name-asc')">Name: A-Z</div>
-                        <div class="sort-option" onclick="sortProducts('name-desc')">Name: Z-A</div>
                         <div class="sort-option" onclick="sortProducts('price-asc')">Price: Low to High</div>
                         <div class="sort-option" onclick="sortProducts('price-desc')">Price: High to Low</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Cart Icon with Hover Logic -->
             <div class="cart-icon-container" id="cart-trigger">
                 <i class="fas fa-shopping-bag cart-icon"></i>
                 <span class="cart-badge" id="cart-count">0</span>
@@ -819,11 +708,10 @@
 
     <!-- Main Content -->
     <main class="container shop-layout" id="shop-section">
-        <!-- Sidebar Filters -->
         <aside class="filters">
             <div class="filter-group">
                 <div class="filter-title">Categories</div>
-                <button class="category-btn active" onclick="filterProducts('all', this); scrollToShop()">All Products</button>
+                <button class="category-btn active" onclick="filterProducts('all', this); scrollToShop()">All</button>
                 <button class="category-btn" onclick="filterProducts('electronics', this); scrollToShop()">Electronics</button>
                 <button class="category-btn" onclick="filterProducts('fashion', this); scrollToShop()">Fashion</button>
                 <button class="category-btn" onclick="filterProducts('home', this); scrollToShop()">Home & Living</button>
@@ -831,10 +719,7 @@
             </div>
         </aside>
 
-        <!-- Product Grid -->
-        <section class="product-grid" id="product-grid">
-            <!-- Products injected via JS -->
-        </section>
+        <section class="product-grid" id="product-grid"></section>
     </main>
 
     <!-- Product Modal -->
@@ -848,11 +733,11 @@
                 <div class="modal-category" id="modal-category"></div>
                 <h2 class="modal-title" id="modal-title"></h2>
                 <div class="modal-rating" id="modal-rating"></div>
-                <p class="modal-desc">Experience premium quality with our meticulously crafted product. Designed for the modern lifestyle, this item combines functionality with timeless aesthetics. Perfect for everyday use or as a statement piece in your collection.</p>
+                <p class="modal-desc">Experience premium quality with our meticulously crafted product. Designed for the modern lifestyle, this item combines functionality with timeless aesthetics.</p>
                 <div class="modal-footer">
                     <span class="modal-price" id="modal-price"></span>
                     <div class="modal-actions">
-                        <button class="modal-return-btn" onclick="closeProductModal()">Return to Store</button>
+                        <button class="modal-return-btn" onclick="closeProductModal()">Return</button>
                         <button class="modal-add-btn" id="modal-add-btn">Add to Cart</button>
                     </div>
                 </div>
@@ -867,12 +752,13 @@
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
             <h2>Order Summary</h2>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <!-- ADDED CLEAR CART BUTTON HERE -->
+                <button class="clear-cart-btn" id="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
         </div>
-        <div class="cart-items" id="cart-items">
-            <!-- Cart items injected here -->
-            <div style="text-align: center; margin-top: 2rem; color: var(--secondary);">Your cart is empty.</div>
-        </div>
+        <div class="cart-items" id="cart-items"></div>
         <div class="cart-footer">
             <div class="summary-row">
                 <span>Subtotal</span>
@@ -908,268 +794,41 @@
         // --- DATA ---
         const products = [
             // --- ELECTRONICS (8 Items) ---
-            {
-                id: 201,
-                name: "Noise-Cancelling Headphones",
-                price: 349.00,
-                category: "electronics",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 202,
-                name: "Smart Home Speaker",
-                price: 129.00,
-                category: "electronics",
-                rating: 3,
-                image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 203,
-                name: "Digital Minimalist Watch",
-                price: 249.00,
-                category: "electronics",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 204,
-                name: "Retro Wireless Camera",
-                price: 599.00,
-                category: "electronics",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 205,
-                name: "Ergonomic Mechanical Keyboard",
-                price: 189.00,
-                category: "electronics",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 206,
-                name: "Portable Projector",
-                price: 299.00,
-                category: "electronics",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1517637392530-6454c6531967?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 207,
-                name: "Bluetooth Earbuds",
-                price: 159.00,
-                category: "electronics",
-                rating: 3,
-                image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 208,
-                name: "Smart Fitness Tracker",
-                price: 89.00,
-                category: "electronics",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-
+            { id: 201, name: "Noise-Cancelling Headphones", price: 349.00, category: "electronics", rating: 4, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 202, name: "Smart Home Speaker", price: 129.00, category: "electronics", rating: 3, image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 203, name: "Digital Minimalist Watch", price: 249.00, category: "electronics", rating: 5, image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 204, name: "Retro Wireless Camera", price: 599.00, category: "electronics", rating: 5, image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 205, name: "Ergonomic Mechanical Keyboard", price: 189.00, category: "electronics", rating: 4, image: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 206, name: "Portable Projector", price: 299.00, category: "electronics", rating: 4, image: "https://images.unsplash.com/photo-1517637392530-6454c6531967?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 207, name: "Bluetooth Earbuds", price: 159.00, category: "electronics", rating: 3, image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 208, name: "Smart Fitness Tracker", price: 89.00, category: "electronics", rating: 4, image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
             // --- FASHION (8 Items) ---
-            {
-                id: 301,
-                name: "Premium Leather Backpack",
-                price: 189.00,
-                category: "fashion",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 302,
-                name: "Organic Cotton T-Shirt",
-                price: 45.00,
-                category: "fashion",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 303,
-                name: "Classic Denim Jacket",
-                price: 120.00,
-                category: "fashion",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 304,
-                name: "Silk Scarf",
-                price: 65.00,
-                category: "fashion",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 305,
-                name: "Cashmere Sweater",
-                price: 145.00,
-                category: "fashion",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 306,
-                name: "Linen Summer Dress",
-                price: 95.00,
-                category: "fashion",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 307,
-                name: "Wool Beanie",
-                price: 30.00,
-                category: "fashion",
-                rating: 3,
-                image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 308,
-                name: "Tailored Trousers",
-                price: 85.00,
-                category: "fashion",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-
+            { id: 301, name: "Premium Leather Backpack", price: 189.00, category: "fashion", rating: 4, image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 302, name: "Organic Cotton T-Shirt", price: 45.00, category: "fashion", rating: 5, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 303, name: "Classic Denim Jacket", price: 120.00, category: "fashion", rating: 5, image: "https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 304, name: "Silk Scarf", price: 65.00, category: "fashion", rating: 4, image: "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 305, name: "Cashmere Sweater", price: 145.00, category: "fashion", rating: 5, image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 306, name: "Linen Summer Dress", price: 95.00, category: "fashion", rating: 4, image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 307, name: "Wool Beanie", price: 30.00, category: "fashion", rating: 3, image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 308, name: "Tailored Trousers", price: 85.00, category: "fashion", rating: 4, image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
             // --- HOME & LIVING (8 Items) ---
-            {
-                id: 401,
-                name: "Ceramic Pour-Over Set",
-                price: 85.00,
-                category: "home",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1544233726-2846915d1d62?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 402,
-                name: "Abstract Wall Art",
-                price: 150.00,
-                category: "home",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 403,
-                name: "Minimalist Desk Lamp",
-                price: 75.00,
-                category: "home",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1507473888900-52e1ad145924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 404,
-                name: "Scented Soy Candle",
-                price: 35.00,
-                category: "home",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1602825485442-5012c2db1e82?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 405,
-                name: "Geometric Vase",
-                price: 55.00,
-                category: "home",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1581783342308-f792ca11df53?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 406,
-                name: "Macrame Wall Hanging",
-                price: 90.00,
-                category: "home",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 407,
-                name: "Bamboo Serving Tray",
-                price: 40.00,
-                category: "home",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1584346133934-a3afd2a3d69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 408,
-                name: "Linen Throw Pillow",
-                price: 45.00,
-                category: "home",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1584100936595-c0654b54fa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-
+            { id: 401, name: "Ceramic Pour-Over Set", price: 85.00, category: "home", rating: 5, image: "https://images.unsplash.com/photo-1544233726-2846915d1d62?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 402, name: "Abstract Wall Art", price: 150.00, category: "home", rating: 4, image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 403, name: "Minimalist Desk Lamp", price: 75.00, category: "home", rating: 5, image: "https://images.unsplash.com/photo-1507473888900-52e1ad145924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 404, name: "Scented Soy Candle", price: 35.00, category: "home", rating: 4, image: "https://images.unsplash.com/photo-1602825485442-5012c2db1e82?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 405, name: "Geometric Vase", price: 55.00, category: "home", rating: 5, image: "https://images.unsplash.com/photo-1581783342308-f792ca11df53?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 406, name: "Macrame Wall Hanging", price: 90.00, category: "home", rating: 4, image: "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 407, name: "Bamboo Serving Tray", price: 40.00, category: "home", rating: 4, image: "https://images.unsplash.com/photo-1584346133934-a3afd2a3d69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 408, name: "Linen Throw Pillow", price: 45.00, category: "home", rating: 5, image: "https://images.unsplash.com/photo-1584100936595-c0654b54fa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
             // --- ACCESSORIES (8 Items) ---
-            {
-                id: 501,
-                name: "Minimalist Chrono Watch",
-                price: 299.00,
-                category: "accessories",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 502,
-                name: "Polarized Sunglasses",
-                price: 110.00,
-                category: "accessories",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 503,
-                name: "Leather Wallet",
-                price: 60.00,
-                category: "accessories",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1627123424574-724758594e93?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 504,
-                name: "Minimalist Ring",
-                price: 80.00,
-                category: "accessories",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 505,
-                name: "Canvas Tote Bag",
-                price: 35.00,
-                category: "accessories",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1544816155-12df9643f663?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 506,
-                name: "Silver Bracelet",
-                price: 95.00,
-                category: "accessories",
-                rating: 4,
-                image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 507,
-                name: "Travel Passport Holder",
-                price: 45.00,
-                category: "accessories",
-                rating: 3,
-                image: "https://images.unsplash.com/photo-1558008258-3256797b43f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            },
-            {
-                id: 508,
-                name: "Silk Hair Scarf",
-                price: 40.00,
-                category: "accessories",
-                rating: 5,
-                image: "https://images.unsplash.com/photo-1599694766904-830d3dc0c911?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            }
+            { id: 501, name: "Minimalist Chrono Watch", price: 299.00, category: "accessories", rating: 5, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 502, name: "Polarized Sunglasses", price: 110.00, category: "accessories", rating: 5, image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 503, name: "Leather Wallet", price: 60.00, category: "accessories", rating: 4, image: "https://images.unsplash.com/photo-1627123424574-724758594e93?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 504, name: "Minimalist Ring", price: 80.00, category: "accessories", rating: 5, image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 505, name: "Canvas Tote Bag", price: 35.00, category: "accessories", rating: 4, image: "https://images.unsplash.com/photo-1544816155-12df9643f663?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 506, name: "Silver Bracelet", price: 95.00, category: "accessories", rating: 4, image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 507, name: "Travel Passport Holder", price: 45.00, category: "accessories", rating: 3, image: "https://images.unsplash.com/photo-1558008258-3256797b43f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" },
+            { id: 508, name: "Silk Hair Scarf", price: 40.00, category: "accessories", rating: 5, image: "https://images.unsplash.com/photo-1599694766904-830d3dc0c911?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" }
         ];
 
         // --- STATE ---
@@ -1209,6 +868,7 @@
             renderProducts(products);
             setupCartHover();
             setupSortDropdown();
+            loadCart(); 
         });
 
         // --- FUNCTIONS ---
@@ -1216,20 +876,15 @@
         // Sort Dropdown Click-Outside Logic
         function setupSortDropdown() {
             document.addEventListener('click', (e) => {
-                // If the dropdown is open AND the click is NOT inside the sort-dropdown container
                 if (sortMenu.classList.contains('open') && !sortDropdown.contains(e.target)) {
                     sortMenu.classList.remove('open');
                 }
             });
         }
 
-        // Scroll Functions
         function scrollToHome(e) {
             if(e) e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function scrollToShop(e) {
@@ -1237,140 +892,84 @@
             setTimeout(() => {
                 const element = document.getElementById('shop-section');
                 const header = document.querySelector('header');
-                
                 if (element && header) {
                     const headerHeight = header.offsetHeight;
                     const targetPosition = element.offsetTop - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                 }
             }, 10); 
         }
 
-        // Cart Hover Logic
         function setupCartHover() {
             let timeout;
-
             cartTrigger.addEventListener('mouseenter', () => {
                 clearTimeout(timeout);
                 openCartSidebar();
             });
-
             cartTrigger.addEventListener('mouseleave', () => {
                 timeout = setTimeout(() => {
-                    if (!cartSidebar.matches(':hover')) {
-                        closeCartSidebar();
-                    }
+                    if (!cartSidebar.matches(':hover')) closeCartSidebar();
                 }, 300);
             });
-
             cartSidebar.addEventListener('mouseleave', () => {
-                timeout = setTimeout(() => {
-                    closeCartSidebar();
-                }, 300);
+                timeout = setTimeout(() => { closeCartSidebar(); }, 300);
             });
         }
 
-        function openCartSidebar() {
-            cartSidebar.classList.add('open');
-            cartOverlay.classList.add('open');
-        }
-
-        function closeCartSidebar() {
-            cartSidebar.classList.remove('open');
-            cartOverlay.classList.remove('open');
-        }
-
+        function openCartSidebar() { cartSidebar.classList.add('open'); cartOverlay.classList.add('open'); }
+        function closeCartSidebar() { cartSidebar.classList.remove('open'); cartOverlay.classList.remove('open'); }
         function toggleCart(forceOpen = false) {
-            if(forceOpen) {
-                openCartSidebar();
-            } else {
-                cartSidebar.classList.toggle('open');
-                cartOverlay.classList.toggle('open');
-            }
+            if(forceOpen) openCartSidebar();
+            else { cartSidebar.classList.toggle('open'); cartOverlay.classList.toggle('open'); }
         }
 
-        // Sort Functions
-        function toggleSortMenu() {
-            sortMenu.classList.toggle('open');
-        }
+        function toggleSortMenu() { sortMenu.classList.toggle('open'); }
 
         function sortProducts(criteria) {
             currentSort = criteria;
-            sortMenu.classList.remove('open'); // Close menu immediately after selection
+            sortMenu.classList.remove('open');
             applyFiltersAndSort();
         }
 
         function applyFiltersAndSort() {
-            let filtered = currentFilter === 'all' 
-                ? products 
-                : products.filter(p => p.category === currentFilter);
-
+            let filtered = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
             const searchTerm = searchInput.value.toLowerCase();
-            if (searchTerm) {
-                filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
-            }
+            if (searchTerm) filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
 
             switch (currentSort) {
-                case 'name-asc':
-                    filtered.sort((a, b) => a.name.localeCompare(b.name));
-                    break;
-                case 'name-desc':
-                    filtered.sort((a, b) => b.name.localeCompare(a.name));
-                    break;
-                case 'price-asc':
-                    filtered.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price-desc':
-                    filtered.sort((a, b) => b.price - a.price);
-                    break;
-                default:
-                    // Default order (original)
-                    break;
+                case 'name-asc': filtered.sort((a, b) => a.name.localeCompare(b.name)); break;
+                case 'name-desc': filtered.sort((a, b) => b.name.localeCompare(a.name)); break;
+                case 'price-asc': filtered.sort((a, b) => a.price - b.price); break;
+                case 'price-desc': filtered.sort((a, b) => b.price - a.price); break;
             }
-
             renderProducts(filtered);
             scrollToShop(); 
         }
 
-        // Render Products
         function renderProducts(items) {
             productGrid.innerHTML = '';
-            
             if(items.length === 0) {
                 productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No products found.</p>';
                 return;
             }
-
             items.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
-                    <div class="card-image-wrapper">
-                        <img src="${product.image}" alt="${product.name}">
-                    </div>
+                    <div class="card-image-wrapper"><img src="${product.image}" alt="${product.name}"></div>
                     <div class="card-info">
                         <div class="card-header-row">
                             <span class="card-category">${product.category}</span>
                             <span class="card-id">ID:${product.id}</span>
                         </div>
                         <h3 class="card-title">${product.name}</h3>
-                        
                         <div class="card-actions-row">
                             <button class="details-link" onclick="openProductModal(${product.id})">Details</button>
-                            <div class="card-rating">
-                                ${generateStars(product.rating)}
-                            </div>
+                            <div class="card-rating">${generateStars(product.rating)}</div>
                         </div>
-
                         <div class="card-footer">
                             <span class="price">$${product.price.toFixed(2)}</span>
-                            <button class="add-btn" onclick="addToCart(${product.id})">
-                                Add to Cart
-                            </button>
+                            <button class="add-btn" onclick="addToCart(${product.id})">Add to Cart</button>
                         </div>
                     </div>
                 `;
@@ -1378,66 +977,65 @@
             });
         }
 
-        // Generate Star Rating HTML
         function generateStars(rating) {
             let stars = '';
             for(let i=0; i<5; i++) {
                 if(i < rating) stars += '<i class="fas fa-star"></i>';
-                else if(i === rating && rating % 1 !== 0) stars += '<i class="fas fa-star-half-alt"></i>';
                 else stars += '<i class="far fa-star"></i>';
             }
             return stars;
         }
 
-        // Filtering Logic
         function filterProducts(category, btnElement) {
             document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
             btnElement.classList.add('active');
-
             currentFilter = category;
             applyFiltersAndSort();
         }
 
-        // Search Logic
-        searchInput.addEventListener('input', (e) => {
-            applyFiltersAndSort();
-        });
+        searchInput.addEventListener('input', (e) => applyFiltersAndSort());
 
-        // --- PRODUCT MODAL LOGIC ---
+        // --- MODAL LOGIC ---
         function openProductModal(id) {
             const product = products.find(p => p.id === id);
             if (!product) return;
-
             modalImg.src = product.image;
             modalCategory.textContent = product.category;
             modalTitle.textContent = product.name;
             modalRating.innerHTML = generateStars(product.rating);
             modalPrice.textContent = `$${product.price.toFixed(2)}`;
-            
-            modalAddBtn.onclick = () => {
-                addToCart(id);
-                closeProductModal();
-            };
-
+            modalAddBtn.onclick = () => { addToCart(id); closeProductModal(); };
             productModalOverlay.classList.add('open');
         }
 
-        function closeProductModal() {
-            productModalOverlay.classList.remove('open');
-        }
+        function closeProductModal() { productModalOverlay.classList.remove('open'); }
 
         // --- CART LOGIC ---
+
+        // 1. Load from LocalStorage
+        function loadCart() {
+            const savedCart = localStorage.getItem('auraCart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartUI(); // Update UI with loaded items
+            }
+        }
+
+        // 2. Save to LocalStorage
+        function saveCart() {
+            localStorage.setItem('auraCart', JSON.stringify(cart));
+        }
+
         function addToCart(id) {
             const product = products.find(p => p.id === id);
             const existingItem = cart.find(item => item.id === id);
-
             if(existingItem) {
                 existingItem.qty++;
             } else {
                 cart.push({...product, qty: 1});
             }
-
             updateCartUI();
+            saveCart(); // SAVE EVERY TIME
             showToast();
             openCartSidebar();
         }
@@ -1445,20 +1043,22 @@
         function removeFromCart(id) {
             cart = cart.filter(item => item.id !== id);
             updateCartUI();
+            saveCart();
         }
 
         function updateQty(id, change) {
             const item = cart.find(item => item.id === id);
             if(item) {
                 item.qty += change;
-                if(item.qty <= 0) {
-                    removeFromCart(id);
-                } else {
+                if(item.qty <= 0) removeFromCart(id);
+                else {
                     updateCartUI();
+                    saveCart();
                 }
             }
         }
 
+        // 3. Update UI and Calculate Totals
         function updateCartUI() {
             const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
             cartCount.textContent = totalQty;
@@ -1466,29 +1066,32 @@
             cartItemsContainer.innerHTML = '';
             let subtotal = 0;
 
+            // Handle Clear Button Visibility
+            const clearBtn = document.getElementById('clear-cart-btn');
+            if (cart.length > 0) {
+                clearBtn.style.display = 'block';
+            } else {
+                clearBtn.style.display = 'none';
+            }
+
             if(cart.length === 0) {
                 cartItemsContainer.innerHTML = '<div style="text-align: center; margin-top: 2rem; color: var(--secondary);">Your cart is empty.</div>';
             } else {
                 cart.forEach(item => {
                     subtotal += item.price * item.qty;
-                    
                     const itemEl = document.createElement('div');
                     itemEl.className = 'cart-item';
                     itemEl.innerHTML = `
                         <img src="${item.image}" alt="${item.name}">
                         <div class="cart-item-details">
                             <div class="cart-item-title">${item.name}</div>
-                            <!-- Updated: Added "each" and changed color via class -->
                             <div class="cart-item-price">$${item.price.toFixed(2)} each</div>
                             <div class="qty-controls">
                                 <button class="qty-btn" onclick="updateQty(${item.id}, -1)">-</button>
                                 <span>${item.qty}</span>
                                 <button class="qty-btn" onclick="updateQty(${item.id}, 1)">+</button>
-                                <!-- Added Line Total -->
                                 <span class="line-total">$${(item.price * item.qty).toFixed(2)}</span>
-                                <button class="qty-btn" style="color: red; border-color: red;" onclick="removeFromCart(${item.id})">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                                <button class="qty-btn" style="color: red; border-color: red;" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
                             </div>
                         </div>
                     `;
@@ -1496,6 +1099,7 @@
                 });
             }
 
+            // Calculate Totals
             const tax = subtotal * TAX_RATE;
             const total = subtotal + tax;
 
@@ -1504,20 +1108,24 @@
             cartTotal.textContent = `$${total.toFixed(2)}`;
         }
 
+        function clearCart() {
+            if(confirm("Are you sure you want to clear your cart?")) {
+                cart = [];
+                updateCartUI();
+                saveCart();
+            }
+        }
+
         function showToast() {
             toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
         function checkout() {
-            if(cart.length === 0) {
-                alert("Your cart is empty!");
-                return;
-            }
+            if(cart.length === 0) { alert("Your cart is empty!"); return; }
             alert("Proceeding to checkout with total: " + cartTotal.textContent);
         }
     </script>
 </body>
 </html>
+
